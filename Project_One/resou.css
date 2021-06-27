@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    list-style: none;
+}
+.clear {
+    clear: both;
+}
+a {
+    text-decoration: none;
+}
+.under {
+    height: 2px;
+    background-color: #12CBC4;
+    margin-top: -3px;
+}
+i  {
+    color: #ffff;
+    font-size: 26px;
+    padding: 0 24px;
+}
+#header {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    background-color: black;
+    box-shadow: 0 0 3px black;
+}
+#nav li {
+    display: inline-block;
+    position: relative;
+    
+}
+#nav > li >a {
+    color: #ffffff;
+}
+#nav li a {
+    display: inline-block;
+    padding: 0 18px;
+    line-height: 56px;
+}
+#nav > li:hover> a { /*Chỉ ảnh hưởng đến cấp cha không ảnh hưởng đến cấp con */
+    color: #ffffff;
+    background-color:#2f3640;
+}
+#nav li:hover .subnav { /* Di vào thẻ li sẽ hiển thị thẻ con là subnav chứa thẻ con bị ẩn*/
+    display: block;
+}
+#nav .subnav {
+    min-width: 150px;
+    display: none;
+    position: absolute;
+    background-color: #fd79a8;/*Màu nền cho nền chức năng con bị ẩn*/
+    box-shadow: 0 0 3px rgb(29, 184, 132);/* Đổ bóng cho thẻ con bị ẩn*/
+}
+#nav .subnav li:hover  { /*Hover cho thẻ cấp con bị ẩn */
+    color: #ffffff;
+    background-color: black;
+}
+#nav .subnav a {
+    color: #ffffff;
+}
+#nav .subnav> li { /*Full chiều ngang cho vừa block ở thẻ con bị ẩn*/
+    width: 100%;
+}
+/* background */
+.bg {
+    width: 100%;
+    height: 300px;
+    background: url('./img/Images/img32.jpg');
+    box-shadow: 1px 1px 3px black;
+}
+.bg h1 {
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    font-weight: bold;
+    text-shadow: 0px 5px 5px black;
+}
+/* head-main */
+.head-main h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.head-main i {
+    color: #00a8ff;
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    float: left;
+    margin-left: 18px;
+    justify-content: center;
+}
+/* body-main */
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .block1,.block2,.block3 {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 40px;
+    position: relative;
+  }
+  .block1 {
+    background: url('./img/Images/img21.jpg');
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  .block2 {
+      background: url('./img/Images/img28.jpg');
+      border: 1px solid black;
+      border-radius: 8px;
+  }
+ .block3 {
+     background: url('./img/Images/img6.jpg');
+     border: 1px solid black;
+     border-radius: 8px;
+ }
+ .block1:hover .overlay,.block2:hover .overlay,.block3:hover .overlay {
+     background: url('./img/Images/img11.jpg');
+     cursor: pointer; 
+     opacity: 1;
+     width: 100%;
+     height: 100%;
+     border: 1px solid black;
+     border-radius: 8px;
+ }
+ .space {
+     margin-bottom: 25px;
+ }
+ .block1 a,.block2 a,.block3 a{
+     color: #00a8ff;
+ }
+ .block1 i,.block2 i,.block3 i {
+     font-size: 35px;
+     margin-top: 20px;
+     color: #10ac84;
+ }
+ .block1 h3,.block2 h3,.block3 h3 {
+     color: #ffffff;
+     font-size: 18px;
+     margin-top: 10px;
+     letter-spacing: 2px;
+ }
+ .overlay h4 {
+     color: #ffffff;
+     margin-bottom: 10px;
+ }
+ .block1 p,.block2 p,.block3 p {
+     color: #ffffff;
+     margin-top: 40px;
+ }
+ .overlay{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index:1;
+    padding:20px;
+    text-align: center;
+    opacity:0;
+    transition: 0.5s;
+}
