@@ -1,0 +1,230 @@
+/* 13/06/2021 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    list-style: none;
+}
+.clear {
+    clear: both;
+}
+a {
+    text-decoration: none;
+}
+.under {
+    height: 2px;
+    background-color: #12CBC4;
+    margin-top: -3px;
+}
+i  {
+    color: #ffff;
+    font-size: 26px;
+    padding: 0 24px;
+}
+#header {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    background-color: black;
+    box-shadow: 0 0 3px black;
+}
+#nav li {
+    display: inline-block;
+    position: relative;
+    
+}
+#nav > li >a {
+    color: #ffffff;
+}
+#nav li a {
+    display: inline-block;
+    padding: 0 18px;
+    line-height: 56px;
+}
+#nav > li:hover> a { /*Chỉ ảnh hưởng đến cấp cha không ảnh hưởng đến cấp con */
+    color: #ffffff;
+    background-color:#2f3640;
+}
+#nav li:hover .subnav { /* Di vào thẻ li sẽ hiển thị thẻ con là subnav chứa thẻ con bị ẩn*/
+    display: block;
+}
+#nav .subnav {
+    min-width: 150px;
+    display: none;
+    position: absolute;
+    background-color: #fd79a8;/*Màu nền cho nền chức năng con bị ẩn*/
+    box-shadow: 0 0 3px rgb(29, 184, 132);/* Đổ bóng cho thẻ con bị ẩn*/
+}
+#nav .subnav li:hover  { /*Hover cho thẻ cấp con bị ẩn */
+    color: #ffffff;
+    background-color: black;
+}
+#nav .subnav a {
+    color: #ffffff;
+}
+#nav .subnav> li { /*Full chiều ngang cho vừa block ở thẻ con bị ẩn*/
+    width: 100%;
+}
+/* Body */
+#main {
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+#main h2 {
+    color: #353b48;
+    padding-top: 200px;
+}
+.detail {
+    margin-top: 20px;
+}
+.detail p i {
+    color: #353b48;
+    font-size: 16px;
+    margin-right: -20px;
+    margin-left: -23px;
+}
+.detail h3 {
+    margin-top: 20px;
+    color: #353b48;
+}
+.img1 {
+    width: 100%;
+    height: 580px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    background:url('./img/Images/img33.JPG');
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.img2 {
+    width: 100%;
+    height: 580px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    background:url('./img/Images/img34.JPG');
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.end {
+    width: 100%;
+    height: 100px;
+    background-color: #e4e4e4;
+    margin-bottom: 50px;
+    line-height: 100px;
+    padding-left: 110px;
+}
+/* Footer */
+#footer {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
+    height: 380px;
+    background-color: #1e272e;
+}
+/* block1 */
+.block1 {
+    width: 400px;
+    height: 290px;
+    background-color: #1e272e;
+}
+.block1 p {
+    margin-top: 20px;
+    color: #718093;
+}
+.btn {
+    width: 170px;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid #f5f6fa;
+    text-align: center;
+    padding: 9px 20px;
+    margin-top: 30px;
+    background-color: #fd79a8;
+}
+.btn a {
+    color: #f5f6fa;
+}
+/* block2 */
+.block2 {
+    width: 200px;
+    margin-left: 450px;
+    margin-top: -290px;
+    height: 290px;
+    background-color: #1e272e;
+}
+.block2 p {
+    margin-top: 20px;
+    color: #718093;
+    line-height: 20px;
+}
+/* block3 */
+.block3 {
+    width: 200px;
+    margin-left: 680px;
+    margin-top: -290px;
+    height: 290px;
+    background-color: #1e272e;
+}
+.block3 p {
+    margin-top: 20px;
+    color: #718093;
+    line-height: 20px;
+}
+/* block4 */
+.block4 {
+    width: 200px;
+    margin-left: 890px;
+    margin-top: -290px;
+    height: 290px;
+    background-color: #1e272e;
+}
+.block1 h4, .block2 h4,.block3 h4,.block5 h4 {
+    color: #f5f6fa;
+    font-size: 12px;
+    padding-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+} 
+.block4 h4 {
+    padding-left: 20px;
+    color: #f5f6fa;
+    font-size: 12px;
+    padding-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+}
+.icon {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* block5 */
+.block5 {
+    width: 300px;
+    margin-left: 1160px;
+    margin-top: -290px;
+    height: 290px;
+    background-color: #1e272e;
+}
+/* Footer */
+.endd {
+    text-align: center;
+    color: #f5f6fa;
+    margin-top: 30px;
+}

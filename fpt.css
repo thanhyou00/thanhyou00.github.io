@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    list-style: none;
+}
+.clear {
+    clear: both;
+}
+a {
+    text-decoration: none;
+}
+.under {
+    height: 2px;
+    background-color: #12CBC4;
+    margin-top: -3px;
+}
+.lang i , .select i, .temp i  {
+    color: #ffff;
+    font-size: 26px;
+    padding: 0 24px;
+}
+#header {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    display: block;
+    background-color: black;
+    box-shadow: 0 0 3px black;
+    z-index: 1;
+}
+#nav li {
+    display: inline-block;
+    position: relative;
+    
+}
+#nav > li >a {
+    color: #ffffff;
+}
+#nav li a {
+    display: inline-block;
+    padding: 0 18px;
+    line-height: 56px;
+}
+#nav > li:hover> a { /*Chỉ ảnh hưởng đến cấp cha không ảnh hưởng đến cấp con */
+    color: #ffffff;
+    background-color:#2f3640;
+}
+#nav li:hover .subnav { /* Di vào thẻ li sẽ hiển thị thẻ con là subnav chứa thẻ con bị ẩn*/
+    display: block;
+}
+#nav .subnav {
+    min-width: 110px;
+    display: none;
+    position: absolute;
+    background-color: #fd79a8;/*Màu nền cho nền chức năng con bị ẩn*/
+    box-shadow: 0 0 3px rgb(29, 184, 132);/* Đổ bóng cho thẻ con bị ẩn*/
+}
+#nav .subnav li:hover  { /*Hover cho thẻ cấp con bị ẩn */
+    color: #ffffff;
+    background-color: black;
+}
+#nav .subnav a {
+    color: #ffffff;
+}
+#nav .subnav> li { /*Full chiều ngang cho vừa block ở thẻ con bị ẩn*/
+    width: 100%;
+}
+/* Body */
+.top {
+    width: 100%;
+    height: 122px;
+    background-color: gainsboro;
+    box-shadow: 0 0 3px black;  
+}
+.top h1 {
+    padding-top: 60px;
+}
+/* Intro */
+#intro {
+    width: 25%;
+    height: 81vh;
+    background-color: #ffffff;
+    float: left;
+    padding: 20px 20px;
+}
+.img img {
+    margin: 0 auto;
+    width: 330px;
+    height: 110px;
+}
+.menu i {
+    font-size: 20px;
+    color: black;
+    margin-left: 45px;
+    margin-bottom: 30px;
+}
+.menu a {
+    color: black;
+}
+/* Intro */
+/* Main */
+#main {
+    width: 75%;
+    height: 81vh;
+    background-color: gainsboro;
+    float: right;
+}
+.head {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    box-shadow: 0 0 3px black;
+}
+.head h1 {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    padding-top: 20px;
+}
+.body-main h2 {
+    margin-top: 60px;
+    margin-left: 60px;
+}
+.pro {
+    margin-left: 60px;
+    margin-top: 40px;
+}
+.pro a {
+    font-size: 20px;
+}
+.pro i {
+    margin-bottom: 35px;
+    margin-right: 15px;
+}
+.pro a:hover {
+    text-decoration: underline;
+}
+/* Main */
+/* Body */
